@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muzeu i sendeve</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <p class="subtitle">Programi në WWW · Zgjidhje reference</p>
+        <h1>Muzeu i sendeve</h1>
+    </header>
+
+    <nav aria-label="Navigimi i ekspozitës">
+        <a href="#celesi">Çelësi</a>
+        <a href="#filxhani">Filxhani</a>
+        <a href="#bileta">Bileta</a>
+    </nav>
+
+    <main>
+        <p class="date">Ekspozita: 1 tetor 2026</p>
+
+        <section class="museum" aria-label="Sendet e ekspozuara">
+
+            <!-- Çelësi -->
+            <article class="card" id="celesi">
+                <h2>Çelësi</h2>
+
+                <div class="illustration">
+                    <svg viewBox="0 0 200 200"
+                         role="img" aria-label="Ilustrim i një çelësi">
+                        <circle cx="65" cy="65" r="29"
+                                fill="none" stroke="#ad6900"
+                                stroke-width="13"/>
+                        <path d="M86 85 L155 150"
+                              fill="none" stroke="#ad6900"
+                              stroke-width="16"
+                              stroke-linecap="square"/>
+                        <path d="M126 125 L143 109 L153 119 L137 136"
+                              fill="#ad6900"/>
+                        <path d="M143 143 L157 129 L169 141 L155 155"
+                              fill="#ad6900"/>
+                    </svg>
+                </div>
+
+                <p class="description">
+                    Hapja e një dere mund të jetë fillimi i një historie.
+                </p>
+
+                <details>
+                    <summary>Historia e fshehur</summary>
+                    <p>
+                        Ky çelës është simbol i zbulimit.
+                        Ai përfaqëson dyert që hapen drejt
+                        mundësive dhe kujtimeve të reja.
+                    </p>
+                </details>
+            </article>
+
+            <!-- Filxhani -->
+            <article class="card" id="filxhani">
+                <h2>Filxhani</h2>
+
+                <div class="illustration">
+                    <svg viewBox="0 0 200 200"
+                         role="img" aria-label="Ilustrim i një filxhani">
+                        <path d="M40 48 H140 V132
+                                 Q90 163 40 132 Z"
+                              fill="#176ca4"/>
+                        <path d="M140 59
+                                 C190 55 190 87 141 126"
+                              fill="none" stroke="#176ca4"
+                              stroke-width="13"
+                              stroke-linecap="round"/>
+                        <path d="M40 48 H140"
+                              stroke="#176ca4" stroke-width="7"/>
+                    </svg>
+                </div>
+
+                <p class="description">
+                    Një filxhan mbledh kujtime nga bisedat.
+                </p>
+
+                <details>
+                    <summary>Historia e fshehur</summary>
+                    <p>
+                        Ky filxhan simbolizon takimet dhe
+                        bisedat e përditshme. Çdo kafe mund
+                        të shoqërohet me një kujtim të veçantë.
+                    </p>
+                </details>
+            </article>
+
+            <!-- Bileta -->
+            <article class="card" id="bileta">
+                <h2>Bileta</h2>
+
+                <div class="illustration">
+                    <svg viewBox="0 0 200 200"
+                         role="img" aria-label="Ilustrim i një bilete">
+                        <rect x="25" y="48" width="150" height="95"
+                              rx="12" fill="#efbd5c"/>
+                        <path d="M137 53 V138"
+                              stroke="#80530d"
+                              stroke-width="3"
+                              stroke-dasharray="5 5"/>
+                        <path d="M25 95 H175"
+                              stroke="#efbd5c"
+                              stroke-width="1"/>
+                    </svg>
+                </div>
+
+                <p class="description">
+                    Një udhëtim i shkurtër, një kujtim i gjatë.
+                </p>
+
+                <details>
+                    <summary>Historia e fshehur</summary>
+                    <p>
+                        Kjo biletë simbolizon udhëtimet dhe
+                        përvojat e reja. Edhe një udhëtim
+                        i shkurtër mund të lërë kujtime.
+                    </p>
+                </details>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        Shembull mësimor · Të dhëna të sajuara · Vetëm front end
+    </footer>
+
+</body>
+</html>
