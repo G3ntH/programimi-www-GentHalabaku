@@ -11,7 +11,7 @@ dhe elementin details për historitë.
 
 ## Si hapet
 Hapet skedari index.html përmes Live Server
-në VS Code apo nëpermjet index nga browser (e gjetur ne file)
+në VS Code apo nëpermjet index nga browser (file:///C:/Users/genth/OneDrive/Desktop/programimi-www-GentHalabaku/JavaII/index.html)
 
 ## Hyrjet dhe daljet
 Hyrjet: klikimi i lidhjeve dhe hapja e historive.
