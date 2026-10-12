@@ -1,0 +1,29 @@
+/* DIAGNOZA
+
+   Problemi i parë: dy rregulla konfliktuale për të njëjtin element
+   (<article id="poster" class="poster">).
+   - #poster ka specifikë (1,0,0), .poster ka (0,1,0).
+   - Selektori me id fiton në kaskadë, pavarësisht rendit. Kështu u zbatuan
+     color: white dhe background: white, pra tekst i bardhë mbi sfond të bardhë.
+   - Rregulli i klasës (color: #17263c) humbi.
+
+   Problemi i dytë: tejkalimi i gjerësisë.
+   - width: 700px + padding: 80px. Me box-sizing: border-box gjerësia mbetet 700px,
+     por në ekran 360px del 340px jashtë ekranit. Pa border-box do të ishte 860px.
+   - width: 100% në .poster humbi para width: 700px nga #poster (e njëjta arsye).
+
+   RREGULLIMI (pa !important):
+   - Heqim stilimin nga #poster. Id përdoret vetëm për ankorim, jo për stil.
+   - Të gjitha rregullat jetojnë në një klasë të vetme, .poster, pra pa konflikt.
+   - Gjerësia: width: 100% me max-width, kështu që nuk kalon kurrë ekranin.
+   - Padding që shkon me ekranin (clamp), që në 360px të mos hajë gjithë hapësirën. */
+
+.poster {
+  width: 100%;
+  max-width: var(--measure);
+  padding: clamp(1rem, 6vw, 2.5rem);
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
