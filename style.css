@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  margin: 1rem;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+main {
+  max-width: 60rem;
+  margin-inline: auto;
+}
+
+.members {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  border: 2px solid navy;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.5rem 1rem;
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid #777;
+}
+
+.profile h2,
+.profile p {
+  min-width: 0;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+a:focus-visible {
+  outline: 3px solid navy;
+  outline-offset: 3px;
+}
+
+@media (min-width: 700px) {
+  .profile {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: center;
+  }
+}
