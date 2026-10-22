@@ -1,0 +1,337 @@
+
+/* =========================
+   1. Rregullat bazë
+   ========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1rem;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  line-height: 1.6;
+  color: #172033;
+  background: #f5f7fb;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: #155eef;
+}
+
+a:focus-visible {
+  outline: 3px solid #f59e0b;
+  outline-offset: 4px;
+}
+
+/* Lidhja për anashkalimin e navigimit */
+
+.skip {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 10;
+  padding: 0.75rem 1rem;
+  background: #ffffff;
+  color: #172033;
+  border-radius: 0.5rem;
+  transform: translateY(-150%);
+}
+
+.skip:focus {
+  transform: translateY(0);
+}
+
+/* =========================
+   2. Header dhe menuja
+   ========================= */
+
+.site-header {
+  padding: 3rem 1.25rem;
+  color: #ffffff;
+  background: linear-gradient(135deg, #102a56, #155eef);
+}
+
+.header-content {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.site-header h1 {
+  max-width: 900px;
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+}
+
+.intro {
+  max-width: 650px;
+  margin-block: 1rem 1.5rem;
+  color: #e3ebff;
+}
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.main-nav a {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  color: #ffffff;
+  text-decoration: none;
+  border: 1px solid rgb(255 255 255 / 45%);
+  border-radius: 999px;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
+  color: #102a56;
+  background: #ffffff;
+}
+
+/* =========================
+   3. Seksioni i aktiviteteve
+   ========================= */
+
+.activities-section,
+.about-section,
+.contact-section {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 3rem 1.25rem;
+}
+
+.section-heading {
+  max-width: 700px;
+  margin-bottom: 2rem;
+}
+
+.section-heading h2,
+.about-section h2,
+.contact-section h2 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.section-heading > p:last-child {
+  color: #596579;
+}
+
+/* Grid: numri bazë i kolonave ndryshohet nga media queries */
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+}
+
+/* =========================
+   4. Kartat
+   ========================= */
+
+.activity-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e1e6ef;
+  border-radius: 1rem;
+  box-shadow: 0 5px 18px rgb(16 42 86 / 6%);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.activity-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgb(16 42 86 / 12%);
+}
+
+.activity-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #dce5f5;
+}
+
+.card-content {
+  min-width: 0;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.25rem;
+}
+
+.category {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 0.75rem;
+  padding: 0.3rem 0.65rem;
+  color: #1747a6;
+  background: #eaf0ff;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.card-content h3 {
+  width: 100%;
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+
+.card-content > p {
+  max-width: 100%;
+  margin: 0 0 1rem;
+  color: #596579;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+.card-content .schedule {
+  margin-top: auto;
+  padding-top: 0.5rem;
+  color: #172033;
+}
+
+.details-link {
+  display: inline-block;
+  margin-top: 0.25rem;
+  font-weight: 750;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.details-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* =========================
+   5. Rreth festivalit dhe kontakti
+   ========================= */
+
+.about-section {
+  max-width: none;
+  padding-inline: max(1.25rem, calc((100% - 1150px) / 2));
+  background: #eaf0ff;
+}
+
+.about-section > p:last-child,
+.contact-section > p {
+  max-width: 750px;
+  overflow-wrap: anywhere;
+}
+
+.contact-section a {
+  overflow-wrap: anywhere;
+}
+
+.site-footer {
+  padding: 1.5rem 1.25rem;
+  color: #e3ebff;
+  background: #102a56;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0.25rem 0;
+  overflow-wrap: anywhere;
+}
+
+/* =========================
+   6. Responsive design
+   ========================= */
+
+/* Nën 600px: një kolonë */
+
+@media (max-width: 599px) {
+  .site-header {
+    padding-block: 2rem;
+  }
+
+  .main-nav {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .main-nav a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .activities-section,
+  .about-section,
+  .contact-section {
+    padding-block: 2rem;
+  }
+
+  .activities-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* 600px deri 899px: dy kolona */
+
+@media (min-width: 600px) and (max-width: 899px) {
+  .activities-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* 900px e lart: tri kolona */
+
+@media (min-width: 900px) {
+  .activities-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Respekto preferencën e përdoruesit për animacione */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
