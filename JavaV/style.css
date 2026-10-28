@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  padding: 0 3.5rem;
+  background: #f4f6fb;
+  color: #16345c;
+}
+
+.skip {
+  position: absolute;
+  left: -9999px;
+}
+
+header {
+  padding-top: 1rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: #172b4d;
+}
+
+header::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: #00695c;
+  margin-top: 2.2rem;
+}
+
+main {
+  max-width: 823px;
+  margin: 2.2rem auto 0;
+}
+
+.intro {
+  margin-bottom: 1.4rem;
+  font-size: 0.9rem;
+}
+
+.form-group {
+  margin-bottom: 0.9rem;
+}
+
+label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  width: 160px;
+  height: 36px;
+  padding: 0.4rem 0.5rem;
+  border: 1px solid #aeb9c9;
+  border-radius: 4px;
+  background: white;
+  font-size: 0.9rem;
+}
+
+input[type="number"] {
+  width: 60px;
+}
+
+input:focus {
+  outline: 2px solid #00695c;
+  outline-offset: 1px;
+}
+
+fieldset {
+  margin-top: 1.2rem;
+  margin-bottom: 1rem;
+  padding: 1rem 0.8rem;
+  border: 1px solid #b8c3d3;
+}
+
+legend {
+  padding: 0 0.25rem;
+  font-size: 0.9rem;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  margin: 0.6rem 0;
+}
+
+.radio-option input {
+  margin-right: 0.4rem;
+}
+
+.radio-option label {
+  margin: 0;
+}
+
+.rules {
+  display: flex;
+  align-items: center;
+  margin: 0.8rem 0 1rem;
+}
+
+.rules input {
+  margin-right: 0.4rem;
+}
+
+.rules label {
+  margin: 0;
+}
+
+button {
+  padding: 0.65rem 0.9rem;
+  background: #08796f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #05645c;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+caption {
+  margin-bottom: 0.15rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+th,
+td {
+  border: 1px solid #b8c3d3;
+  padding: 0.65rem 0.5rem;
+  text-align: left;
+}
+
+thead th {
+  background: #f4f6fb;
+  color: #172b4d;
+}
+
+tbody th {
+  font-weight: 700;
+}
+
+footer {
+  max-width: 823px;
+  margin: 2rem auto;
+  padding: 1rem 0;
+  font-size: 0.8rem;
+  color: #53657d;
+}
